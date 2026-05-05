@@ -3,13 +3,15 @@ from fastapi_pagination import response
 from pydantic import BaseModel
 from groq import Groq
 from dotenv import load_dotenv
-import os
-
 from typer import prompt
 import config as ModelConfig
 import json
+import uvicorn
+import os
 
 load_dotenv()
+
+port = int(os.environ.get("PORT", 8000))
 
 app = FastAPI()
 
@@ -152,3 +154,6 @@ Message: {req.message}
     print(f"Response:\n{response.choices[0].message.content}\n")
 
     return json.loads(response.choices[0].message.content)
+
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="0.0.0.0", port=port)
