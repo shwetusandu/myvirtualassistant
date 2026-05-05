@@ -238,10 +238,6 @@ Final Architecture:
 Telegram → MCP → Router → Execution → Response
 ```
 
-![MyVirtualAssistant](docs/images/make-workflow.png)
-![MyVirtualAssistant](docs/images/Telegram.png)
-![MyVirtualAssistant](docs/images/Google-Task.png)
-
 ---
 
 # 🧪 TEST SCENARIOS
