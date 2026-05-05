@@ -15,6 +15,10 @@ port = int(os.environ.get("PORT", 8000))
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return {"status": "running"}
+
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 class Req(BaseModel):
