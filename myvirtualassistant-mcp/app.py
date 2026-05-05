@@ -15,6 +15,10 @@ port = int(os.environ.get("PORT", 8000))
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return {"status": "running"}
+
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 class Req(BaseModel):
@@ -154,6 +158,3 @@ Message: {req.message}
     print(f"Response:\n{response.choices[0].message.content}\n")
 
     return json.loads(response.choices[0].message.content)
-
-if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=port)
