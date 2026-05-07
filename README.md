@@ -30,6 +30,10 @@ Users juggle:
 
 # 💡 SOLUTION
 
+# 💡 Infographic overview
+
+![](docs/images/My-Virtual-Assistant.png)
+
 A **Production-Grade AI Virtual Assistant System** that:
 
 ✔ Understands user intent  
